@@ -1,0 +1,52 @@
+<p>
+  <button (click)="Eliminar()">{{ c }}</button>
+</p>
+
+<div *ngIf="todo">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Vidas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let gato of gatos; index as i">
+        <th scope="row">{{ i }}</th>
+        <td>{{ this.gato.nombre }}</td>
+        <td>{{ this.gato.vidas }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="registros">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Vidas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ this.gatos[0].nombre }}</td>
+        <td>{{ this.gatos[0].vidas }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="encabezado">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Vidas</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>

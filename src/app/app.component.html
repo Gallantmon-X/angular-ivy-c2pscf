@@ -1,0 +1,29 @@
+<div class="center-content">
+  <hello name="{{ name }}"></hello>
+</div>
+<app-boton
+  [titulo]="botones_t.titulo1"
+  [opcion]="opciones.opc1"
+  (valE)="seleccion($event)"
+></app-boton>
+<app-boton
+  [titulo]="botones_t.titulo2"
+  [opcion]="opciones.opc2"
+  (valE)="seleccion($event)"
+></app-boton>
+<app-boton
+  [titulo]="botones_t.titulo3"
+  [opcion]="opciones.opc3"
+  (valE)="seleccion($event)"
+></app-boton>
+<app-boton
+  [titulo]="botones_t.titulo4"
+  [opcion]="opciones.opc4"
+  (valE)="seleccion($event)"
+  (clks) ="tClicks($event)"
+></app-boton>
+<app-tema1 *ngIf="valE =='1'" (ocultar)="Oculto($event)"></app-tema1>
+<app-tema2 *ngIf="valE =='2'" (ocultar)="Oculto($event)"></app-tema2>
+<app-tema3 *ngIf="valE =='3'" (ocultar)="Oculto($event)"></app-tema3>
+<app-tabla *ngIf="valE =='4'" (ocultar)="Oculto($event)"
+[c]="clicks"></app-tabla>
